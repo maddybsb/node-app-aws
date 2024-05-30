@@ -1,0 +1,14 @@
+{
+  "name": "file-upload",
+  "version": "1.0.0",
+  "description": "file-upload from postman or browser",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "DEMO_MAN",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+  }
+}
