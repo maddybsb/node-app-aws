@@ -1,7 +1,7 @@
-FROM node:16.16.0-alpine
+FROM node:lts
 WORKDIR /app
-COPY package.json .
+COPY package.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD [ "run","npm","node", "app.js" ]
+CMD [ "node", "app.js" ]
