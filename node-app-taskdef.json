@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:073979272724:task-definition/node-test-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:744584490626:task-definition/node-app-taskdef:1",
     "containerDefinitions": [
         {
-            "name": "node-app-container",
-            "image": "073979272724.dkr.ecr.us-east-1.amazonaws.com/node_demo_repo_sssvvv:latest",
+            "name": "node-app-task",
+            "image": "744584490626.dkr.ecr.us-east-1.amazonaws.com/node-app:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "node-app-container-3000-tcp",
+                    "name": "3000",
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp",
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/node-test-task",
+                    "awslogs-group": "/ecs/node-app-taskdef",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -33,8 +33,8 @@
             "systemControls": []
         }
     ],
-    "family": "node-test-task",
-    "executionRoleArn": "arn:aws:iam::073979272724:role/ecsTaskExecutionRole",
+    "family": "node-app-taskdef",
+    "executionRoleArn": "arn:aws:iam::744584490626:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
@@ -71,7 +71,7 @@
         "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2"
+        "FARGATE"
     ],
     "cpu": "1024",
     "memory": "3072",
@@ -79,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-05-30T18:24:56.225Z",
-    "registeredBy": "arn:aws:iam::073979272724:user/cloud_user",
+    "registeredAt": "2024-06-01T02:54:02.946Z",
+    "registeredBy": "arn:aws:iam::744584490626:user/cloud_user",
     "tags": []
 }
